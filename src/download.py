@@ -34,9 +34,9 @@ if __name__ == '__main__':
 
 	url = 'http://5harad.com/data/NC-stops-2009-2014.tar.gz'
 	path = '../data/'
-	download(url, path)
+	#download(url, path)
 	
-	fname = 'NC-stops-2009-2014.tar.gz'
+	fname = 'orig-data.tar.gz'
 	untar(path+fname, path)
 
  

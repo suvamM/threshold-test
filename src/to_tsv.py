@@ -26,7 +26,7 @@ def convert_to_tsv(orig_fname, output_fname, path=''):
 
 if __name__ == '__main__':
 
-  # path = '../data/orig-data/'
+  path = '../data/orig-data/'
 
   print "processing CONTRABAND.txt..."
   convert_to_tsv(orig_fname='CONTRABAND.txt', output_fname='CONTRABAND.tsv', path=path)
