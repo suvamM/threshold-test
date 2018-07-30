@@ -1,4 +1,6 @@
 #!/usr/bin/env Rscript
+#install.packages("stringr")
+#install.packages("dplyr")
 library(stringr)
 library(dplyr)
 
