@@ -1,11 +1,15 @@
 #!/usr/bin/env python
-import urllib, tarfile
+# import urllib, tarfile
+import urllib2, ssl, tarfile
 
 	
 def download(url, path):
 	"""Copy the contents of a file from a given URL to a local file in the directory given by 'path'.
 	"""
-	webFile = urllib.urlopen(url)
+	ctx = ssl.create_default_context()
+	ctx.check_hostname = False
+	ctx.verify_mode = ssl.CERT_NONE
+	webFile = urllib2.urlopen(url, context=ctx)
 	print 'Downloading tar file...'
 	localFile = open(path+url.split('/')[-1], 'w')
 	localFile.write(webFile.read())
